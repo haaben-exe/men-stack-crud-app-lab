@@ -1,0 +1,31 @@
+<!-- views/fruits/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fruits Index</title>
+</head>
+
+<body>
+  <h1>All Fruits</h1>
+  <ul>
+    <% Comments.forEach(comment=> { %>
+      <li>
+        <a href="/journal/<%= comment._id %>">
+          <%= comment.text %>
+        </a>
+      </li>
+      <ul>
+        <li>
+          <%= comment.name %>
+        </li>
+      </ul>
+      <% }); %>
+  </ul>
+  <a href="/journal/new">Add New Entry</a>
+</body>
+
+</html>

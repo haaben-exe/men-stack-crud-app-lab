@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Entry</title>
+</head>
+
+<body>
+    <h1>Create a new journal entry below:</h1>
+    <form action="/journal" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="date">Date:</label>
+        <input type="date" name="myDate" id="myDate" />
+
+        <label for="text">Type journal here:</label>
+        <input type="text" name="text" id="text" />
+
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/journal/">Back to Journal</a>
+
+</body>
+
+</html>

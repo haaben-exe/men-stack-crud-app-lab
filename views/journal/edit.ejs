@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%= comment.name %>
+    </title>
+</head>
+
+<body>
+
+    <body>
+        <!-- update the header -->
+        <h1>Edit <%= comment.name %>
+        </h1>
+        <form action="/journal/<%=comment._id%>?_method=PUT" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="<%= comment.name %>" />
+
+            <label for="date">Date:</label>
+            <input type="date" name="myDate" id="myDate" />
+
+            <label for="text">Type journal here:</label>
+            <input type="text" name="text" value="<%=comment.text %>" />
+
+            <button type="submit">Update Entry</button>
+        </form>
+        <a href="/fruits">Back to Fruits</a>
+    </body>
+
+</body>
+
+</html>

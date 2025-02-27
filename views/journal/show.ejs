@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= comment.name %>
+    </title>
+</head>
+
+<body>
+    <h1>
+        <%= comment.name %>
+    </h1>
+    <p>
+        <%= comment.text %>
+    </p>
+    <form action="/journal/<%=comment._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= comment.name %></button>
+    </form>
+    <form action="/journal/<%=comment._id%>?_method=PUT" method="POST"></form>
+    <a href="/fruits/">Back to Fruits</a>
+</body>
+
+</html>
