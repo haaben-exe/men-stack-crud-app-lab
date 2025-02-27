@@ -20,7 +20,8 @@
         <button type="submit">Delete <%= comment.name %></button>
     </form>
     <form action="/journal/<%=comment._id%>?_method=PUT" method="POST"></form>
-    <a href="/fruits/">Back to Fruits</a>
+    <a href="/journal/">Back to Journal</a>
+    <a href="/journal/<%=comment._id%>/edit">Edit Entry</a>
 </body>
 
 </html>
